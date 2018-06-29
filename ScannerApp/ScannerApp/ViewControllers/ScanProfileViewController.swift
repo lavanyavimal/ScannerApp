@@ -2,7 +2,7 @@
 //  ScanProfileViewController.swift
 //  ScannerApp
 //
-//  Created by Veerachamy, Vimal on 6/29/18.
+//  Created by Lavanya on 6/29/18.
 //
 
 import UIKit
@@ -11,9 +11,10 @@ import CoreML
 
 class ScanProfileViewController: UIViewController {
 
-    
     //HOLDS OUR INPUT
     var  inputImage:CIImage?
+    
+    var  selectedImage:UIImage?
     
     //RESULT FROM OVERALL RECOGNITION
     var  recognizedWords:[String] = [String]()
@@ -152,16 +153,16 @@ class ScanProfileViewController: UIViewController {
 
         self.title = "Profile Information";
         
+        self.navigationController?.navigationBar.topItem?.title = ""
+        
         //LETS LOAD AN IMAGE FROM RESOURCE
-        let loadedImage:UIImage = UIImage(named: "license.png")! //TRY Sample2, Sample3 too
+        let loadedImage:UIImage = UIImage(named: "license.png")!
         
         //WE NEED AN CIIMAGE - NO NEED TO SCALE
-        inputImage = CIImage(image:loadedImage)!
+        inputImage = CIImage(image:self.selectedImage!)!
         
         //LET'S DO IT
         self.doOCR(ciImage: inputImage!)
-        
-        
     }
     
     override func didReceiveMemoryWarning() {

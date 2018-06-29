@@ -19,23 +19,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Do4-Wj-g8b">
-                                <rect key="frame" x="25" y="40" width="325" height="340"/>
+                                <rect key="frame" x="25" y="40" width="325" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="340" id="8rZ-E7-Fna"/>
+                                    <constraint firstAttribute="height" constant="250" id="8rZ-E7-Fna"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkin" translatesAutoresizingMaskIntoConstraints="NO" id="hp8-Lb-38v">
-                                <rect key="frame" x="65" y="410" width="245" height="100"/>
+                                <rect key="frame" x="65" y="320" width="245" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="1Kb-0A-FmB"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuX-q4-Y0k">
-                                <rect key="frame" x="123.5" y="444" width="129" height="32"/>
+                                <rect key="frame" x="123" y="354" width="129" height="32"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <state key="normal" title="Scan Documents"/>
                                 <connections>
                                     <action selector="openCamAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MLZ-O3-RFO"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkin" translatesAutoresizingMaskIntoConstraints="NO" id="TmI-Wv-he5">
+                                <rect key="frame" x="65" y="428" width="245" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="vl7-dJ-ogg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XP0-OD-SRh">
+                                <rect key="frame" x="111" y="462" width="153" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Process Information"/>
+                                <connections>
+                                    <action selector="processProfileInformation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="syr-k4-Wd1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -44,11 +58,16 @@
                             <constraint firstItem="hp8-Lb-38v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1v0-8o-T3b"/>
                             <constraint firstItem="Do4-Wj-g8b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="2tn-S4-g3o"/>
                             <constraint firstItem="Do4-Wj-g8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="53d-U0-BNf"/>
+                            <constraint firstItem="TmI-Wv-he5" firstAttribute="top" secondItem="hp8-Lb-38v" secondAttribute="bottom" constant="8" symbolic="YES" id="A61-5l-eJz"/>
                             <constraint firstItem="hp8-Lb-38v" firstAttribute="top" secondItem="Do4-Wj-g8b" secondAttribute="bottom" constant="30" id="Ai8-NL-0Ra"/>
                             <constraint firstItem="GuX-q4-Y0k" firstAttribute="centerY" secondItem="hp8-Lb-38v" secondAttribute="centerY" id="G3K-pg-2CO"/>
+                            <constraint firstItem="XP0-OD-SRh" firstAttribute="centerX" secondItem="TmI-Wv-he5" secondAttribute="centerX" id="RMP-VM-IZ9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Do4-Wj-g8b" secondAttribute="trailing" constant="25" id="S2g-9y-THD"/>
                             <constraint firstItem="hp8-Lb-38v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="XKU-gZ-LUg"/>
+                            <constraint firstItem="TmI-Wv-he5" firstAttribute="leading" secondItem="hp8-Lb-38v" secondAttribute="leading" id="gAG-uX-FQx"/>
                             <constraint firstItem="Do4-Wj-g8b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="hKg-fL-QxD"/>
+                            <constraint firstItem="TmI-Wv-he5" firstAttribute="trailing" secondItem="hp8-Lb-38v" secondAttribute="trailing" id="lwd-mr-nus"/>
+                            <constraint firstItem="XP0-OD-SRh" firstAttribute="centerY" secondItem="TmI-Wv-he5" secondAttribute="centerY" id="oeP-94-UNi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hp8-Lb-38v" secondAttribute="trailing" constant="65" id="pXV-7g-ubf"/>
                             <constraint firstItem="GuX-q4-Y0k" firstAttribute="centerX" secondItem="hp8-Lb-38v" secondAttribute="centerX" id="vcs-8n-qqy"/>
                         </constraints>
@@ -62,6 +81,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072.8" y="81.409295352323838"/>
+        </scene>
+        <!--Scan Profile View Controller-->
+        <scene sceneID="3c9-UH-zVU">
+            <objects>
+                <viewController storyboardIdentifier="ScanProfileViewController" id="r75-oj-FlG" customClass="ScanProfileViewController" customModule="ScannerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ycT-aX-j6t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="kc1-dP-3kd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsv-Li-fPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1810" y="81"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="zMz-a1-san">

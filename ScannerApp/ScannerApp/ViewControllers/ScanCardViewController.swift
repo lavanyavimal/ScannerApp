@@ -14,10 +14,17 @@ class ScanCardViewController: UIViewController {
     let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var imageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.title = "Scan Document"
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         imageView.layer.cornerRadius = imageView.frame.size.width/2
         imageView.layer.masksToBounds = true
@@ -41,10 +48,21 @@ class ScanCardViewController: UIViewController {
         present(imagePicker, animated: true)
     }
     
+    @IBAction func processProfileInformation(_ sender: Any) {
+        
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let controller = storyBoard.instantiateViewController(withIdentifier: "ScanProfileViewController") as! ScanProfileViewController
+        controller.selectedImage = imageView.image
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+    }
+    
     @IBAction func openLibraryAction(_ sender: Any) {
         openPhotoLibrary()
         
     }
+    
     func openPhotoLibrary() {
         guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
             print("can't open photo library")
