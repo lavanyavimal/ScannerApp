@@ -18,6 +18,8 @@ class ScanCardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     override func viewWillAppear(_ animated: Bool) {

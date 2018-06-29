@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AIu-mq-W3G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CPt-qs-XDR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1072.8" y="81.409295352323838"/>
+            <point key="canvasLocation" x="1412" y="81.409295352323838"/>
         </scene>
         <!--Scan Profile View Controller-->
         <scene sceneID="3c9-UH-zVU">
@@ -139,6 +139,7 @@
                                         <state key="normal" title="Validate Information"/>
                                         <connections>
                                             <action selector="processProfileInformation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gu7-3M-nKO"/>
+                                            <action selector="validateInformation:" destination="r75-oj-FlG" eventType="touchUpInside" id="kex-8j-hsa"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -171,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsv-Li-fPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1808.8" y="80.50974512743629"/>
+            <point key="canvasLocation" x="2148" y="80.50974512743629"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="zMz-a1-san">
@@ -185,19 +186,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p34-Ip-EWC">
-                                <rect key="frame" x="62" y="140" width="252" height="46"/>
+                                <rect key="frame" x="62" y="184" width="252" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkin" translatesAutoresizingMaskIntoConstraints="NO" id="gcd-75-da9">
-                                <rect key="frame" x="158" y="329" width="187" height="99"/>
+                                <rect key="frame" x="158" y="373" width="187" height="99"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="99" id="Ydz-ig-TrF"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3u-Cg-6i3">
-                                <rect key="frame" x="158" y="363" width="187" height="30"/>
+                                <rect key="frame" x="158" y="407" width="187" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="MK5-DA-DhT"/>
                                 </constraints>
@@ -225,10 +226,29 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fbW-gM-2aj"/>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="hKW-9P-0av"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JbA-dV-KGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="313" y="83"/>
+            <point key="canvasLocation" x="652" y="82.3088455772114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RCA-Ei-kzx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CPt-qs-XDR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bjf-Rj-kKQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AIu-mq-W3G" kind="relationship" relationship="rootViewController" id="QIN-eq-f5G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iMz-E5-7uA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-113" y="81"/>
         </scene>
     </scenes>
     <resources>

@@ -150,12 +150,27 @@ class ScanProfileViewController: UIViewController {
         
     }
     
+    @IBAction func validateInformation(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Alert", message: "Validation matched!", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Profile Information";
         
         self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.isNavigationBarHidden = false
         
         //LETS LOAD AN IMAGE FROM RESOURCE
         let loadedImage:UIImage = UIImage(named: "license.png")!

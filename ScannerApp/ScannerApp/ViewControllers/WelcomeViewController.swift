@@ -13,14 +13,21 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     @IBAction func onlineCheckInClicked(_ sender: Any) {
         
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
         let controller = storyBoard.instantiateViewController(withIdentifier: "ScanCardViewController")
         
-        let navigationCtrl = UINavigationController(rootViewController: controller)
+        //let navigationCtrl = UINavigationController(rootViewController: controller)
         
-        self.present(navigationCtrl, animated:true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+       // self.present(navigationCtrl, animated:true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
