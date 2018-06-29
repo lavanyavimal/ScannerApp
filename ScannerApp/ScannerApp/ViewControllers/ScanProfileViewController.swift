@@ -172,11 +172,17 @@ class ScanProfileViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.isNavigationBarHidden = false
         
-        //LETS LOAD AN IMAGE FROM RESOURCE
-        //let loadedImage:UIImage = UIImage(named: "license.png")!
+        /**
+         Remove this uncomment and comment below line to have image read from locally**/
+        let loadedImage:UIImage = UIImage(named: "license.png")!
+        inputImage = CIImage(image:loadedImage)!
+ 
         
-        //WE NEED AN CIIMAGE - NO NEED TO SCALE
+       /**
+          Remove this uncomment line to load from camera image
         inputImage = CIImage(image:selectedImage!)!
+ 
+        **/
         
         //LET'S DO IT
         self.doOCR(ciImage: inputImage!)
