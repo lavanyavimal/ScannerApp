@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6028975820E6A26B0070D7B1 /* ScanCardInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6028975720E6A26B0070D7B1 /* ScanCardInfoCell.swift */; };
 		603F278620E6830E00E4F9F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603F278520E6830E00E4F9F1 /* AppDelegate.swift */; };
 		603F278B20E6830E00E4F9F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603F278920E6830E00E4F9F1 /* Main.storyboard */; };
 		603F278D20E6830E00E4F9F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 603F278C20E6830E00E4F9F1 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6028975720E6A26B0070D7B1 /* ScanCardInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCardInfoCell.swift; sourceTree = "<group>"; };
 		603F278220E6830E00E4F9F1 /* ScannerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScannerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		603F278520E6830E00E4F9F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		603F278A20E6830E00E4F9F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		603F27B920E684FE00E4F9F1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				6028975720E6A26B0070D7B1 /* ScanCardInfoCell.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				603F27C220E6926B00E4F9F1 /* ScanCardViewController.swift in Sources */,
 				603F27BB20E688F900E4F9F1 /* WelcomeViewController.swift in Sources */,
 				603F27B420E6831800E4F9F1 /* OCR.mlmodel in Sources */,
+				6028975820E6A26B0070D7B1 /* ScanCardInfoCell.swift in Sources */,
 				603F27BD20E6893700E4F9F1 /* ScanProfileViewController.swift in Sources */,
 				603F278620E6830E00E4F9F1 /* AppDelegate.swift in Sources */,
 			);

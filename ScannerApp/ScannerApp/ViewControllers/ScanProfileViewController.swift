@@ -13,8 +13,9 @@ class ScanProfileViewController: UIViewController {
 
     //HOLDS OUR INPUT
     var  inputImage:CIImage?
-    
     var  selectedImage:UIImage?
+
+    @IBOutlet var profileTableView:UITableView?
     
     //RESULT FROM OVERALL RECOGNITION
     var  recognizedWords:[String] = [String]()
@@ -118,6 +119,7 @@ class ScanProfileViewController: UIViewController {
         //THATS WHAT WE WANT - PRINT WORDS TO CONSOLE
         DispatchQueue.main.async {
             self.PrintWords(words: self.recognizedWords)
+            self.profileTableView?.reloadData()
         }
     }
     
@@ -159,7 +161,7 @@ class ScanProfileViewController: UIViewController {
         let loadedImage:UIImage = UIImage(named: "license.png")!
         
         //WE NEED AN CIIMAGE - NO NEED TO SCALE
-        inputImage = CIImage(image:self.selectedImage!)!
+        inputImage = CIImage(image:loadedImage)!
         
         //LET'S DO IT
         self.doOCR(ciImage: inputImage!)
@@ -169,5 +171,27 @@ class ScanProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
+
+extension ScanProfileViewController: UITabBarDelegate, UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return recognizedWords.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ScanCardInfoCell.self), for: indexPath) as? ScanCardInfoCell else {
+            preconditionFailure("Unregistered table view cell")
+        }
+        
+        cell.scanNameLbl?.text = recognizedWords[indexPath.row]
+        
+        return cell
+        
+    }
+    
+    
 
 }
