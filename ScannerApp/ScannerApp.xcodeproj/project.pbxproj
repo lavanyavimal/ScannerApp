@@ -16,6 +16,8 @@
 		603F27A620E6830E00E4F9F1 /* ScannerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603F27A520E6830E00E4F9F1 /* ScannerAppUITests.swift */; };
 		603F27B420E6831800E4F9F1 /* OCR.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 603F27B320E6831800E4F9F1 /* OCR.mlmodel */; };
 		603F27B720E6832600E4F9F1 /* license.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F27B620E6832600E4F9F1 /* license.png */; };
+		603F27BB20E688F900E4F9F1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603F27BA20E688F900E4F9F1 /* WelcomeViewController.swift */; };
+		603F27BD20E6893700E4F9F1 /* ScanProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603F27BC20E6893700E4F9F1 /* ScanProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		603F27A720E6830E00E4F9F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		603F27B320E6831800E4F9F1 /* OCR.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = OCR.mlmodel; sourceTree = "<group>"; };
 		603F27B620E6832600E4F9F1 /* license.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = license.png; sourceTree = "<group>"; };
+		603F27BA20E688F900E4F9F1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		603F27BC20E6893700E4F9F1 /* ScanProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +105,11 @@
 		603F278420E6830E00E4F9F1 /* ScannerApp */ = {
 			isa = PBXGroup;
 			children = (
-				603F27B520E6831D00E4F9F1 /* Images */,
 				603F27B320E6831800E4F9F1 /* OCR.mlmodel */,
+				603F27B920E684FE00E4F9F1 /* ViewModels */,
+				603F27B820E684F400E4F9F1 /* ViewControllers */,
+				603F27B520E6831D00E4F9F1 /* Images */,
 				603F278520E6830E00E4F9F1 /* AppDelegate.swift */,
-				603F278720E6830E00E4F9F1 /* ViewController.swift */,
 				603F278920E6830E00E4F9F1 /* Main.storyboard */,
 				603F278C20E6830E00E4F9F1 /* Assets.xcassets */,
 				603F278E20E6830E00E4F9F1 /* LaunchScreen.storyboard */,
@@ -137,6 +142,23 @@
 				603F27B620E6832600E4F9F1 /* license.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		603F27B820E684F400E4F9F1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				603F278720E6830E00E4F9F1 /* ViewController.swift */,
+				603F27BA20E688F900E4F9F1 /* WelcomeViewController.swift */,
+				603F27BC20E6893700E4F9F1 /* ScanProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		603F27B920E684FE00E4F9F1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				603F278820E6830E00E4F9F1 /* ViewController.swift in Sources */,
+				603F27BB20E688F900E4F9F1 /* WelcomeViewController.swift in Sources */,
 				603F27B420E6831800E4F9F1 /* OCR.mlmodel in Sources */,
+				603F27BD20E6893700E4F9F1 /* ScanProfileViewController.swift in Sources */,
 				603F278620E6830E00E4F9F1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

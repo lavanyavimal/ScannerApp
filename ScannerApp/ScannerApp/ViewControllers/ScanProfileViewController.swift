@@ -1,17 +1,16 @@
 //
-//  ViewController.swift
+//  ScanProfileViewController.swift
 //  ScannerApp
 //
-//  Created by Lavanya on 6/29/18.
+//  Created by Veerachamy, Vimal on 6/29/18.
 //
-
-import UIKit
 
 import UIKit
 import Vision
 import CoreML
 
-class ViewController: UIViewController {
+class ScanProfileViewController: UIViewController {
+
     
     //HOLDS OUR INPUT
     var  inputImage:CIImage?
@@ -150,7 +149,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        self.title = "Profile Information";
         
         //LETS LOAD AN IMAGE FROM RESOURCE
         let loadedImage:UIImage = UIImage(named: "license.png")! //TRY Sample2, Sample3 too
@@ -168,8 +168,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+
 }
-
-
