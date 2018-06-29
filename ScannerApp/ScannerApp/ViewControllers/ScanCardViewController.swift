@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import MobileCoreServices
-import QuartzCore
 
 class ScanCardViewController: UIViewController {
 
