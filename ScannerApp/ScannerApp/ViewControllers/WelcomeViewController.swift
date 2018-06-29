@@ -16,7 +16,7 @@ class WelcomeViewController: UIViewController {
     @IBAction func onlineCheckInClicked(_ sender: Any) {
         
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        let controller = storyBoard.instantiateViewController(withIdentifier: "ScanProfileViewController")
+        let controller = storyBoard.instantiateViewController(withIdentifier: "ScanCardViewController")
         
         let navigationCtrl = UINavigationController(rootViewController: controller)
         

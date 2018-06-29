@@ -10,21 +10,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Scan Profile View Controller-->
+        <!--Scan Card View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ScanProfileViewController" id="BYZ-38-t0r" customClass="ScanProfileViewController" customModule="ScannerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScanCardViewController" id="BYZ-38-t0r" customClass="ScanCardViewController" customModule="ScannerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Do4-Wj-g8b">
+                                <rect key="frame" x="25" y="40" width="325" height="340"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="8rZ-E7-Fna"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkin" translatesAutoresizingMaskIntoConstraints="NO" id="hp8-Lb-38v">
+                                <rect key="frame" x="65" y="410" width="245" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1Kb-0A-FmB"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GuX-q4-Y0k">
+                                <rect key="frame" x="123.5" y="444" width="129" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Scan Documents"/>
+                                <connections>
+                                    <action selector="openCamAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MLZ-O3-RFO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.62745098039215685" green="0.14117647058823529" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hp8-Lb-38v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1v0-8o-T3b"/>
+                            <constraint firstItem="Do4-Wj-g8b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="2tn-S4-g3o"/>
+                            <constraint firstItem="Do4-Wj-g8b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="53d-U0-BNf"/>
+                            <constraint firstItem="hp8-Lb-38v" firstAttribute="top" secondItem="Do4-Wj-g8b" secondAttribute="bottom" constant="30" id="Ai8-NL-0Ra"/>
+                            <constraint firstItem="GuX-q4-Y0k" firstAttribute="centerY" secondItem="hp8-Lb-38v" secondAttribute="centerY" id="G3K-pg-2CO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Do4-Wj-g8b" secondAttribute="trailing" constant="25" id="S2g-9y-THD"/>
+                            <constraint firstItem="hp8-Lb-38v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="XKU-gZ-LUg"/>
+                            <constraint firstItem="Do4-Wj-g8b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="hKg-fL-QxD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hp8-Lb-38v" secondAttribute="trailing" constant="65" id="pXV-7g-ubf"/>
+                            <constraint firstItem="GuX-q4-Y0k" firstAttribute="centerX" secondItem="hp8-Lb-38v" secondAttribute="centerX" id="vcs-8n-qqy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="8JT-Rt-kGB"/>
+                    <connections>
+                        <outlet property="imageView" destination="Do4-Wj-g8b" id="Stj-Sc-94W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1364" y="-58"/>
+            <point key="canvasLocation" x="1072.8" y="81.409295352323838"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="zMz-a1-san">

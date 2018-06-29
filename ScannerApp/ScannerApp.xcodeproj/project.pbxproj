@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		603F278620E6830E00E4F9F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603F278520E6830E00E4F9F1 /* AppDelegate.swift */; };
-		603F278820E6830E00E4F9F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603F278720E6830E00E4F9F1 /* ViewController.swift */; };
 		603F278B20E6830E00E4F9F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603F278920E6830E00E4F9F1 /* Main.storyboard */; };
 		603F278D20E6830E00E4F9F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 603F278C20E6830E00E4F9F1 /* Assets.xcassets */; };
 		603F279020E6830E00E4F9F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 603F278E20E6830E00E4F9F1 /* LaunchScreen.storyboard */; };
@@ -18,6 +17,8 @@
 		603F27B720E6832600E4F9F1 /* license.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F27B620E6832600E4F9F1 /* license.png */; };
 		603F27BB20E688F900E4F9F1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603F27BA20E688F900E4F9F1 /* WelcomeViewController.swift */; };
 		603F27BD20E6893700E4F9F1 /* ScanProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603F27BC20E6893700E4F9F1 /* ScanProfileViewController.swift */; };
+		603F27C020E691A000E4F9F1 /* CheckAVAuthorizationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603F27BF20E691A000E4F9F1 /* CheckAVAuthorizationStatus.swift */; };
+		603F27C220E6926B00E4F9F1 /* ScanCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603F27C120E6926B00E4F9F1 /* ScanCardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 /* Begin PBXFileReference section */
 		603F278220E6830E00E4F9F1 /* ScannerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScannerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		603F278520E6830E00E4F9F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		603F278720E6830E00E4F9F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		603F278A20E6830E00E4F9F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		603F278C20E6830E00E4F9F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		603F278F20E6830E00E4F9F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		603F27B620E6832600E4F9F1 /* license.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = license.png; sourceTree = "<group>"; };
 		603F27BA20E688F900E4F9F1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		603F27BC20E6893700E4F9F1 /* ScanProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanProfileViewController.swift; sourceTree = "<group>"; };
+		603F27BF20E691A000E4F9F1 /* CheckAVAuthorizationStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckAVAuthorizationStatus.swift; sourceTree = "<group>"; };
+		603F27C120E6926B00E4F9F1 /* ScanCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				603F27B320E6831800E4F9F1 /* OCR.mlmodel */,
+				603F27BF20E691A000E4F9F1 /* CheckAVAuthorizationStatus.swift */,
 				603F27B920E684FE00E4F9F1 /* ViewModels */,
 				603F27B820E684F400E4F9F1 /* ViewControllers */,
 				603F27B520E6831D00E4F9F1 /* Images */,
@@ -147,9 +150,9 @@
 		603F27B820E684F400E4F9F1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				603F278720E6830E00E4F9F1 /* ViewController.swift */,
 				603F27BA20E688F900E4F9F1 /* WelcomeViewController.swift */,
 				603F27BC20E6893700E4F9F1 /* ScanProfileViewController.swift */,
+				603F27C120E6926B00E4F9F1 /* ScanCardViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -295,7 +298,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				603F278820E6830E00E4F9F1 /* ViewController.swift in Sources */,
+				603F27C020E691A000E4F9F1 /* CheckAVAuthorizationStatus.swift in Sources */,
+				603F27C220E6926B00E4F9F1 /* ScanCardViewController.swift in Sources */,
 				603F27BB20E688F900E4F9F1 /* WelcomeViewController.swift in Sources */,
 				603F27B420E6831800E4F9F1 /* OCR.mlmodel in Sources */,
 				603F27BD20E6893700E4F9F1 /* ScanProfileViewController.swift in Sources */,
