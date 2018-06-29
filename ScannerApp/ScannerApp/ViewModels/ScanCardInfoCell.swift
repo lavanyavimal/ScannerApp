@@ -2,7 +2,7 @@
 //  ScanCardInfoCell.swift
 //  ScannerApp
 //
-//  Created by Veerachamy, Vimal on 6/29/18.
+//  Created by Lavanya on 6/29/18.
 //
 
 import UIKit
