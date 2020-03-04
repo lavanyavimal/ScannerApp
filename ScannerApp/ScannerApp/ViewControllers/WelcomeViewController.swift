@@ -8,7 +8,8 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
+    
+    //ViewController lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
